@@ -1,9 +1,12 @@
 import React from "react";
+import { Button } from "@common/component";
 
 const Home = () => {
   return (
-    <div className="bg-slate-500">
-      <span className="font-bold text-white">Test</span>
+    <div className="p-2">
+      <Button>
+        <span className="text-white">버튼</span>
+      </Button>
     </div>
   );
 };
