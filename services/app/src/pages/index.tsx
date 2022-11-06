@@ -1,5 +1,5 @@
-import React from "react";
-import { Button } from "@common/component";
+import React from 'react';
+import { Button } from '@common/component';
 
 const Home = () => {
   return (
