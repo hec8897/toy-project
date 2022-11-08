@@ -8,23 +8,24 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['react', '@typescript-eslint'],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      tsx: true,
     },
     ecmaVersion: 11,
     sourceType: 'module',
   },
-  plugins: ['react'],
   rules: {
-    "@next/next/no-html-link-for-pages": ["error", "services/app/src/pages/"],
     'react/prop-types': ['off'],
-    "linebreak-style": ["error", "unix"],
-    quotes: ["error", "single"],
-    "no-empty": "error",
-    "no-use-before-define": "warn",
-    "no-unused-vars": "warn"
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'single'],
+    'no-empty': 'error',
+    '@typescript-eslint/no-unused-vars': 'error',
   },
   settings: {
     react: {
