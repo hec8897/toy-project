@@ -9,10 +9,13 @@
   "scripts": {
     "lint": "eslint ./services --ext .ts,.tsx,.js,.jsx --cache",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "app": "yarn workspace @services/app"
+    "app": "yarn workspace @services/app",
+    "ui": "yarn workspace @common/component"
   },
   "license": "MIT",
   "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
     "next-compose-plugins": "^2.2.1",
     "next-transpile-modules": "^10.0.0"
   },
