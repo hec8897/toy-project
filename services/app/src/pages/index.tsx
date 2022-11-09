@@ -1,13 +1,11 @@
 import React from 'react';
-import { Button } from '@common/component';
+import { Header } from 'components';
 
 const Home = () => {
   return (
-    <div className="p-2">
-      <Button>
-        <span className="text-white">버튼</span>
-      </Button>
-    </div>
+    <>
+      <Header>TITLE</Header>
+    </>
   );
 };
 
