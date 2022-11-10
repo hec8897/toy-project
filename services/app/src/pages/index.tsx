@@ -1,12 +1,15 @@
 import React from 'react';
-import { Header } from 'components';
+import { Flex } from '@common/component';
 
-const Home = () => {
+const Login = () => {
   return (
-    <>
-      <Header>TITLE</Header>
-    </>
+    <div className="bg-slate-100">
+      <Flex items="items-centers" justify="justify-center">
+        <div className="h-[100px]">1</div>
+        <div className="bg-green-100">2</div>
+      </Flex>
+    </div>
   );
 };
 
-export default Home;
+export default Login;
