@@ -6,11 +6,22 @@ interface type {
   col?: boolean;
   items?: string;
   justify?: string;
+  center?: boolean;
+  height?: string;
 }
 
-const Flex = ({ children, col, items, justify }: type) => {
+const Flex = ({ children, col, items, justify, center, height }: type) => {
   return (
-    <div className={classNames('flex', items, justify, { 'flex-col': col })}>
+    <div
+      className={classNames(
+        'flex',
+        items,
+        justify,
+        height,
+        { 'flex-col': col },
+        { 'items-center justify-center': center },
+      )}
+    >
       {children}
     </div>
   );
