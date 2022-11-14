@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Flex, Title, Input, Button } from '@common/component';
-import { useInput } from 'hooks';
+import { useInput } from '@common/hooks';
+import { UserContext } from 'utils';
 
 const Login = () => {
   const { value: IdValue, onChange: IdChange } = useInput('');
   const { value: PwValue, onChange: PwChange } = useInput('');
+  const { setUserInfo } = useContext(UserContext);
+
+  const Login = ({ uid, pw }: { uid: string; pw: string }) => {
+    setUserInfo({ uid, pw });
+  };
+
   return (
     <Flex height="h-screen" center col gap="gap-4">
       <Title>MONOREPO-APP</Title>
@@ -19,7 +26,9 @@ const Login = () => {
             value={PwValue}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => PwChange(e)}
           />
-          <Button>button</Button>
+          <Button onClick={() => Login({ uid: IdValue, pw: PwValue })}>
+            button
+          </Button>
         </Flex>
       </div>
     </Flex>

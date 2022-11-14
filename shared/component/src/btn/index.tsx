@@ -1,7 +1,16 @@
 import React, { ReactNode } from 'react';
 
-const Button = ({ children }: { children: ReactNode }) => (
-  <button className="w-full px-2 py-1 bg-blue-400 border rounded drop-shadow-sm">
+const Button = ({
+  children,
+  onClick,
+}: {
+  children: ReactNode;
+  onClick: () => void;
+}) => (
+  <button
+    onClick={onClick}
+    className="w-full px-2 py-1 bg-blue-400 border rounded drop-shadow-sm"
+  >
     {children}
   </button>
 );
