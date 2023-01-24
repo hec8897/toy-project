@@ -18,11 +18,13 @@
   "license": "MIT",
   "dependencies": {
     "add": "^2.0.6",
+    "axios": "^1.2.3",
     "babel-eslint": "^10.1.0",
     "classnames": "^2.3.2",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "next-compose-plugins": "^2.2.1",
     "next-transpile-modules": "^10.0.0",
+    "react-hook-form": "^7.42.1",
     "react-icons": "^4.6.0",
     "yarn": "^1.22.19"
   },
