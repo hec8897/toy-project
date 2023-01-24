@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Flex, Title, Input, Button } from '@common/component';
 import { useInput } from '@common/hooks';
 import { UserContext } from 'utils';
+import axios from 'axios';
 
 const Login = () => {
   const { value: IdValue, onChange: IdChange } = useInput('');
@@ -9,7 +10,11 @@ const Login = () => {
   const { setUserInfo } = useContext(UserContext);
 
   const Login = ({ uid, pw }: { uid: string; pw: string }) => {
-    setUserInfo({ uid, pw });
+    axios
+      .post('https://jsonplaceholder.typicode.com/posts', { uid, pw })
+      .then(result => {
+        setUserInfo(result.data);
+      });
   };
 
   return (
